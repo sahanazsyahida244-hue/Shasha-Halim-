@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walimatul Urus Faizal & Shasha</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://i.ibb.co/2M7R6w0/songket-gold-white.png') repeat;
+      background-size: cover;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      padding: 40px 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border-bottom: 3px solid #d4af37;
+    }
+    header h1 {
+      font-size: 2.4em;
+      color: #d4af37;
+      margin: 0;
+    }
+    header p {
+      margin: 5px 0;
+      font-size: 1.1em;
+    }
+    section {
+      padding: 25px 20px;
+      background: rgba(255, 255, 255, 0.9);
+      margin: 20px auto;
+      border-radius: 12px;
+      max-width: 600px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #d4af37;
+      margin-bottom: 15px;
+    }
+    .btn {
+      display: inline-block;
+      background: #d4af37;
+      color: #fff;
+      padding: 12px 20px;
+      margin: 8px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #b8922a;
+    }
+    footer {
+      background: rgba(255, 255, 255, 0.9);
+      border-top: 3px solid #d4af37;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+    /* Butang muzik */
+    #music-btn {
+      margin-top: 15px;
+      background: #fff;
+      border: 2px solid #d4af37;
+      color: #d4af37;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    #music-btn:hover {
+      background: #d4af37;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Muzik background -->
+  <audio id="bg-music" autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+  </audio>
+  <button id="music-btn" onclick="toggleMusic()">🎶 Play / Pause Music</button>
+
+  <header>
+    <h1>Walimatul Urus</h1>
+    <p><strong>Abdul Halim @ Mohd Faizal Bin Said Ali</strong> & <strong>Nur Sahanaz Syahida Binti Mat Sahimi</strong></p>
+    <p>Puteri kepada <strong>Mat Sahimi Bin Mohamud</strong> & <strong>Yahida Binti Ya’akop</strong></p>
+    <p><em>Sabtu, 6 Disember 2025 | 16 Jamadilakhir 1447H</em></p>
+  </header>
+
+  <section>
+    <h2>📞 Hubungi Keluarga</h2>
+    <a href="https://wa.me/60172495430" class="btn">WhatsApp Khairy</a>
+    <a href="https://wa.me/601128147477" class="btn">WhatsApp Kethy</a>
+    <a href="https://wa.me/60146690478" class="btn">WhatsApp Kujad</a>
+  </section>
+
+  <section>
+    <h2>📍 Lokasi Majlis</h2>
+    <a href="https://maps.app.goo.gl/ASANxD1sDhdXTHd99" class="btn">Google Maps</a>
+    <a href="https://waze.com/ul?q=No%2023%20Jalan%201%2F90G%2C%20Blok%2013%20Jalan%20Ikan%20Emas%2C%20Cheras%2C%2056000%20Kuala%20Lumpur" class="btn">Waze</a>
+  </section>
+
+  <footer>
+    <p>Dengan penuh kesyukuran, kami menjemput anda memeriahkan majlis ini. 💛</p>
+  </footer>
+
+  <script>
+    const music = document.getElementById("bg-music");
+    const btn = document.getElementById("music-btn");
+
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+        btn.textContent = "⏸ Pause Music";
+      } else {
+        music.pause();
+        btn.textContent = "🎶 Play Music";
+      }
+    }
+  </script>
+</body>
+</html>
